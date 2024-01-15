@@ -8,11 +8,11 @@ def android_get_desired_capabilities():
         'newCommandTimeout': 500,
         'noSign': True,
         'platformName': 'Android',
-        'platformVersion': '8.1',
+        'platformVersion': '8.1',  # змінено з 10
         'resetKeyboard': True,
         'systemPort': 8301,
         'takesScreenshot': True,
-        'udid': '2e37c6cd7d85',
+        'udid': '2e37c6cd7d85',  # з adb devices
         'appPackage': 'com.ajaxsystems',
         'appActivity': 'com.ajaxsystems.ui.activity.LauncherActivity'
     }

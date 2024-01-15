@@ -6,10 +6,14 @@ from selenium.common.exceptions import *
 
 
 class Page:
-
+    """
+        Створено основинй функціонал взаємодії зі сторінкою
+    """
     def __init__(self, driver):
         self.driver = driver
 
+
+    # метод для використання явних очікувань
     def wait_for_element(self, locator, timeout=10):
         wait = WebDriverWait(self.driver, timeout)
         try:
@@ -38,6 +42,7 @@ class Page:
     def send_keys(self, locator, text):
         self.find_element(locator).send_keys(text)
 
+    # метод перевінки наявності банера про помилку
     def banner_displayed(self, locator):
         try:
             self.find_element(locator)

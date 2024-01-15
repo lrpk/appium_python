@@ -3,7 +3,9 @@ from utils.android_utils import email_field_locator, pas_field_locator, login_bt
 
 
 class LoginPage(Page):
-
+    """
+        у цьому класі прописані основні методи для взаємодії зі сторінкою входу у додаток
+    """
     def login_btn(self):
         self.click_element(login_btn_locator)
 
@@ -15,6 +17,7 @@ class LoginPage(Page):
         password_field = self.find_element(pas_field_locator)
         password_field.send_keys(password)
 
+    # Перевінка наявності банера на сторінці
     def check_for_banner(self):
         return not self.banner_displayed(banner_locator)
 
